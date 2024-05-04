@@ -1,0 +1,73 @@
+.container {
+  position: relative; /* Menjadikan posisi relatif untuk menentukan posisi absolut logo */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100vh;
+  margin-top: 30px;
+}
+
+.top-left, .top-right, .bottom-left, .bottom-right {
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.top-left video, .bottom-right video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slideshow img.active {
+  opacity: 1;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px; /* Atur ukuran logo */
+  /* height: 100px; */
+  background-color: transparent; /* Atur warna latar belakang logo */
+  /* Tambahkan gambar background jika ingin menggunakan gambar sebagai logo */
+}
+
+.welcome {
+  position: absolute;
+  top: 20px; /* Atur posisi teks dari atas browser */
+  right: 0; /* Mulai di sisi kiri */
+  transform: translateY(-50%);
+  font-size: 30px; /* Ukuran font */
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold; /* Tebal */
+  color: red; /* Warna merah */
+  white-space: nowrap; /* Agar teks tetap dalam 1 baris */
+  animation: slideRight 15s linear infinite; /* Animasi slideRight */
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%); /* Mulai dari luar layar sebelah kiri */
+  }
+  100% {
+    transform: translateX(-100%); /* Pindahkan ke posisi akhir */
+  }
+}
+
+
