@@ -1,5 +1,5 @@
 .container {
-  position: relative; /* Menjadikan posisi relatif untuk menentukan posisi absolut logo */
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -42,31 +42,31 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100px; /* Atur ukuran logo */
+  width: 100px;
   /* height: 100px; */
-  background-color: transparent; /* Atur warna latar belakang logo */
-  /* Tambahkan gambar background jika ingin menggunakan gambar sebagai logo */
+  background-color: transparent;
+  
 }
 
 .welcome {
   position: absolute;
-  top: 20px; /* Atur posisi teks dari atas browser */
-  right: 0; /* Mulai di sisi kiri */
+  top: 20px;
+  right: 0;
   transform: translateY(-50%);
-  font-size: 30px; /* Ukuran font */
+  font-size: 30px;
   font-family: 'Courier New', Courier, monospace;
-  font-weight: bold; /* Tebal */
-  color: red; /* Warna merah */
-  white-space: nowrap; /* Agar teks tetap dalam 1 baris */
-  animation: slideRight 15s linear infinite; /* Animasi slideRight */
+  font-weight: bold;
+  color: red;
+  white-space: nowrap;
+  animation: slideRight 15s linear infinite;
 }
 
 @keyframes slideRight {
   0% {
-    transform: translateX(100%); /* Mulai dari luar layar sebelah kiri */
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(-100%); /* Pindahkan ke posisi akhir */
+    transform: translateX(-100%);
   }
 }
 
